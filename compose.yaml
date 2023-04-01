@@ -1,0 +1,9 @@
+services:
+  fontforge:
+    build: .
+    image: naomiz/fontforge
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./fonts:/fonts
